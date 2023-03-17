@@ -36,3 +36,4 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |hidden_size|128|Number of hidden neurons in a feedforward layer|
 |activation|sigmoid|choices: ["identity", "sigmoid", "tanh", "ReLU"]|
 
+![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix.png)
