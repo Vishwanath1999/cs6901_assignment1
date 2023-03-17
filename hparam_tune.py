@@ -1,13 +1,14 @@
+# %%
 import numpy as np
 import wandb
 import matplotlib.pyplot as plt
-from keras.datasets import fashion_mnist,mnist
+from keras.datasets import fashion_mnist
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix , accuracy_score
 from scipy.special import log_softmax,softmax
-import argparse
 import seaborn as sns
 
+# %%
 class FFNN:
     def __init__(self,net_size,layer_act,init_wb='random',lr=1e-3,opt='rmsprop',lamda=0,batch_size=64,\
                  n_epochs=10,beta_1=0.9,beta_2=0.999,seed=None,loss='cross_ent',relu_param=0):
@@ -303,6 +304,119 @@ class FFNN:
             else:
                 print(log)
 
+# %%
+class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress',
+               'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+
+# %%
+(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
+
+class_num = 10
+num_row = 2
+num_col = 5# plot images
+fig, axes = plt.subplots(num_row, num_col, figsize=(1.5*num_col,2*num_row))
+img_list=[]
+for i in range(class_num):
+  ax = axes[i//num_col, i%num_col]
+  a = np.argmax(y_train == i)
+  ax.imshow(x_train[a], cmap='gray')
+  ax.set_title(class_names[i])
+plt.tight_layout()
+
+x_train, x_valid, y_train, y_valid = train_test_split(x_train, y_train, test_size=0.1, random_state=0, stratify=y_train)
+
+x_train = x_train.reshape((len(x_train), 28*28))
+x_train = x_train.astype('float32') / 255
+
+x_valid = x_valid.reshape((len(x_valid), 28*28))
+x_valid = x_valid.astype('float32') / 255
+
+# Preprocessing test data
+x_test = x_test.reshape((len(x_test), 28 * 28))
+x_test = x_test.astype('float32') / 225
+
+# %%
+X = x_train.T
+X_valid = x_valid.T
+Y_valid = y_valid
+Y = y_train
+n_class= 10
+n_hidden = 4
+layers = []
+hidden_size=32
+for i in range(n_hidden+2):
+    if i == 0:
+        layers.append(X.shape[0])
+    elif i == n_hidden+1:
+        layers.append(n_class)
+    else:
+        layers.append(hidden_size)
+    i = i+1
+act = []
+o_act = 'softmax'
+actvn_fn = 'identity'
+for i in range(n_hidden+1):
+    if i == n_hidden:
+        act.append(o_act)
+    else:
+        act.append(actvn_fn)
+    i = i+1
+model = FFNN(layers,act,'xavier_uniform',opt='adam')
+
+# %%
+# model.params = model.nn_init(layers)
+# model.train(X,Y,X_valid,Y_valid,wb_log=False)
+# y_pred,_ = model.predict(x_test.T)
+
+# %%
+sweep_config = {
+    'method':'bayes',
+    'metric':{
+    'name':'val_acc',
+    'goal':'maximize'
+    },
+    'parameters':{
+    'n_epochs':{
+    'values':[5,10]
+    },
+    'n_hidden':{
+    'values':[3,4,5]
+    },
+    'n_hidden_units':{
+    'values':[32,64,128]
+    },
+    'l2_coeff':{
+    'values':[0,5e-4,5e-1]
+    },
+    'lr':{
+    'values':[1e-3,1e-4]
+    },
+    'optim_algo':{
+    'values':['sgd','sgdm','rmsprop','adam','nadam','nag']
+    },
+    'batch_size':{
+    'values':[16,32,64]
+    },
+    'weights_init':{
+    'values':['random','xavier_uniform']
+    },
+    'act_func':{
+    'values':['relu','sigmoid','tanh','identity']
+    },
+    'loss_func':{
+    'values':['cross_ent','mse']
+    },
+    'relu_param':{
+    'values':[0,1e-1,1e-2,1e-3]
+    }
+    }
+}
+
+
+# %%
+sweep_id = wandb.sweep(sweep_config, entity="viswa_ee", project="CS6910")
+
+# %%
 def learn():
     config_defaults={
         'n_epochs':10,
@@ -370,87 +484,7 @@ def learn():
     # wandb.log({'conf_mat_'+wandb.run.name:wandb.plot.confusion_matrix(y_true=y_test,preds=y_test_pred,class_names=class_names)})
     
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset',type=str,default='fashion_mnist',choices=['fashion_mnist','mnist'],help='Dataset choice')
-    parser.add_argument('--n_epochs', type=int, default=10, help='Number of training epochs')
-    parser.add_argument('--n_hidden', type=int, default=5, help='Number of hidden layers')
-    parser.add_argument('--n_hidden_units', type=int, default=128, help='Number of hidden units per layer')
-    parser.add_argument('--l2_coeff', type=float, default=0.0, help='L2 regularization coefficient')
-    parser.add_argument('--lr', type=float, default=0.001, help='Learning rate')
-    parser.add_argument('--optim_algo', type=str, default='nadam', choices=['adam', 'sgd','sgdm','nag','nadam'], help='Optimizer')
-    parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
-    parser.add_argument('--weight_init', type=str, default='xavier_normal', choices=['xavier', 'random'], help='Weight initialization method')
-    parser.add_argument('--act_fn', type=str, default='sigmoid', choices=['relu', 'sigmoid','tanh','identity'], help='Activation function')
-    parser.add_argument('--loss_fn', type=str, default='mse', choices=['mse', 'cross_ent'], help='Loss function')
-    parser.add_argument('--relu_param', type=float, default=0, help='ReLU parameter')
-    parser.add_argument('--wandb_entity',type=str,default='name',help='Name of Wandb entity')
-    parser.add_argument('--wandb_project',type=str,default='project', help='Project Name')
-    parser.add_argument('--momentum',type=float,default=0.9,help='Momentum for sgdm and nag')
-    parser.add_argument('--beta',type=float,default=0.999,help='For RMSProp')
-    args = parser.parse_args()
-    config = vars(args)
-    wandb.init(config=config,entity="viswa_ee", project="CS6910")
+# %%
+wandb.agent(sweep_id,learn,count=60)
 
-    if args.dataset == 'fashion_mnist':
-        (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
-    else:
-        (x_train, y_train), (x_test, y_test) = mnist.load_data()
-    
-    x_train, x_valid, y_train, y_valid = train_test_split(x_train, y_train, test_size=0.1, random_state=0, stratify=y_train)
-
-    x_train = x_train.reshape((len(x_train), 28*28))
-    x_train = x_train.astype('float32') / 255
-
-    x_valid = x_valid.reshape((len(x_valid), 28*28))
-    x_valid = x_valid.astype('float32') / 255
-
-    # Preprocessing test data
-    x_test = x_test.reshape((len(x_test), 28 * 28))
-    x_test = x_test.astype('float32') / 225
-
-    X = x_train.T
-    X_valid = x_valid.T
-    Y_valid = y_valid
-    Y = y_train
-    n_class= 10
-
-    layers = []
-    for i in range(args.n_hidden+2):
-        if i == 0:
-            layers.append(X.shape[0])
-        elif i == args.n_hidden+1:
-            layers.append(n_class)
-        else:
-            layers.append(args.n_hidden_units)
-        i = i+1
-    act = []
-    o_act = 'softmax'
-    for i in range(args.n_hidden+1):
-        if i == args.n_hidden:
-            act.append(o_act)
-        else:
-            act.append(args.act_fn)
-        i = i+1
-    class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress',
-               'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
-    
-    model = FFNN(net_size=layers,layer_act=act,init_wb=args.weights_init,lr=args.lr,opt=args.optim_algo,\
-                 lamda=args.l2_coeff,batch_size=args.batch_size,n_epochs=args.n_epochs,loss=args.loss_func,\
-                    relu_param=args.relu_param,gamma=args.gamma,beta=args.beta)
-    model.train(X,Y,X_valid,Y_valid)
-    y_test_pred,_ = model.predict(x_test.T)
-
-    cm = confusion_matrix(y_test, y_test_pred)
-    cm_norm = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis]
-    fig, ax = plt.subplots(figsize=(8, 6))
-    sns.heatmap(
-        cm_norm, annot=True, cmap="Blues", square=True, xticklabels=class_names, yticklabels=class_names
-    )
-    plt.ylabel("True label")
-    plt.xlabel("Predicted label")
-    # Log the confusion matrix plot to wandb
-    wandb.log({"Confusion Matrix":wandb.Image(fig)})
-    fig.clf()
-    plt.close('all')
 
