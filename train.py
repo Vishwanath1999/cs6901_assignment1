@@ -394,8 +394,10 @@ if __name__ == '__main__':
 
     if args.dataset == 'fashion_mnist':
         (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
-    else:
+    elif args.dataset == 'mnist':
         (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    else:
+        raise ValueError('Choose from mnist or fashion_mnist ...')
     
     x_train, x_valid, y_train, y_valid = train_test_split(x_train, y_train, test_size=0.1, random_state=0, stratify=y_train)
 

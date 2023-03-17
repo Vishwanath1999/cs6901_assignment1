@@ -9,9 +9,65 @@ This is an implementation of a feedforward neural network using Numpy. The netwo
 - Seaborn
 - Keras
 
-## How to Use
-The Jupyter Notebook allows you to tune the hparam, and train.py allows you to run the code with the provided hyperparameters.
+## Data
+The network has been trainied with a wide range of hyperparameters listed below on fashion MNIST data. The Keras package has been used to import the data. Other than that keras serves no purpose here.
 
+```
+from keras.datasets fashion_mnist,mnist
+```
+
+## How to Use
+The Jupyter Notebook allows you to tune the hyper-parameters, and train.py allows you to run the code with the provided hyperparameters.
+
+```
+jupyter My_mnist.ipynb
+```
+## Wandb sweep config
+```
+sweep_config = {
+    'method':'bayes',
+    'metric':{
+    'name':'val_acc',
+    'goal':'maximize'
+    },
+    'parameters':{
+    'n_epochs':{
+    'values':[5,10]
+    },
+    'n_hidden':{
+    'values':[3,4,5]
+    },
+    'n_hidden_units':{
+    'values':[32,64,128]
+    },
+    'l2_coeff':{
+    'values':[0,5e-4,5e-1]
+    },
+    'lr':{
+    'values':[1e-3,1e-4]
+    },
+    'optim_algo':{
+    'values':['sgd','sgdm','rmsprop','adam','nadam','nag']
+    },
+    'batch_size':{
+    'values':[16,32,64]
+    },
+    'weights_init':{
+    'values':['random','xavier_uniform']
+    },
+    'act_func':{
+    'values':['relu','sigmoid','tanh','identity']
+    },
+    'loss_func':{
+    'values':['cross_ent','mse']
+    },
+    'relu_param':{
+    'values':[0,1e-1,1e-2,1e-3]
+    }
+    }
+}
+
+```
 ```
 python train.py --wandb_entity myname --wandb_project myprojectname
 ```
@@ -36,4 +92,5 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |hidden_size|128|Number of hidden neurons in a feedforward layer|
 |activation|sigmoid|choices: ["identity", "sigmoid", "tanh", "ReLU"]|
 
+## Confusion matrix for fashion MNIST
 ![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix.png)
