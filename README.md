@@ -93,4 +93,4 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |activation|sigmoid|choices: ["identity", "sigmoid", "tanh", "ReLU"]|
 
 ## Confusion matrix for fashion MNIST
-![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix.png)
+![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix2.png)
