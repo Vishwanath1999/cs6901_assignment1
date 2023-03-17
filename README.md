@@ -86,7 +86,7 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |momentum|0.9|Momentum used by momentum and nag optimizers|
 |beta|0.999|Beta used by rmsprop optimizer|
 |beta1|0.9|Beta1 used by adam and nadam optimizers|
-|beta2|0.9999|Beta2 used by adam and nadam optimizers|
+|beta2|0.999|Beta2 used by adam and nadam optimizers|
 |epsilon|0.000001|Epsilon used by optimizers|
 |weight_decay|0|Weight decay used by optimizers|
 |weight_init|'xavier_uniform'|choices: ["random", "xavier_uniform"]|
