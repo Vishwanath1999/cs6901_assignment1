@@ -10,7 +10,7 @@ import seaborn as sns
 
 class FFNN:
     def __init__(self,net_size,layer_act,init_wb='random',lr=1e-3,opt='rmsprop',lamda=0,batch_size=64,\
-                 n_epochs=10,beta_1=0.9,beta_2=0.999,seed=None,loss='cross_ent',relu_param=0):
+                 n_epochs=10,gamma=0.9,beta=0.999,beta_1=0.9,beta_2=0.999,seed=None,loss='cross_ent',relu_param=0,epsilon=1e-8):
         
         self.net_size = net_size
         self.layer_acts = layer_act
@@ -25,6 +25,9 @@ class FFNN:
         self.loss = loss
         self.seed = seed
         self.relu_param=relu_param
+        self.epsilon = epsilon
+        self.gamma = gamma
+        self.beta = beta
 
     def onehot_encode(self,y, n_labels):
         mat = np.zeros((len(y), n_labels))
@@ -202,26 +205,26 @@ class FFNN:
                 moment_params=None
         elif algo == 'sgdm':
             for idx in range(len_param):
-                moment_params['v_w'+str(idx+1)] = self.beta_1*moment_params['v_w'+str(idx+1)] + (1-self.beta_1)*grad_tape['d_weights'+str(idx+1)]
-                moment_params['v_b'+str(idx+1)] = self.beta_1*moment_params['v_b'+str(idx+1)] + (1-self.beta_1)*grad_tape['d_biases'+str(idx+1)]
+                moment_params['v_w'+str(idx+1)] = self.gamma*moment_params['v_w'+str(idx+1)] + (1-self.gamma)*grad_tape['d_weights'+str(idx+1)]
+                moment_params['v_b'+str(idx+1)] = self.gamma*moment_params['v_b'+str(idx+1)] + (1-self.gamma)*grad_tape['d_biases'+str(idx+1)]
 
                 params['weights'+str(idx+1)] -= lr*moment_params['v_w'+str(idx+1)]
                 params['biases'+str(idx+1)] -= lr*moment_params['v_b'+str(idx+1)]
         elif algo == 'nag':
             for idx in range(len_param):
-                moment_params['v_w'+str(idx+1)] = self.beta_1*moment_params['v_w'+str(idx+1)] - lr*grad_tape['d_weights'+str(idx+1)]
-                moment_params['v_b'+str(idx+1)] = self.beta_1*moment_params['v_b'+str(idx+1)] - lr*grad_tape['d_biases'+str(idx+1)]
+                moment_params['v_w'+str(idx+1)] = self.gamma*moment_params['v_w'+str(idx+1)] - lr*grad_tape['d_weights'+str(idx+1)]
+                moment_params['v_b'+str(idx+1)] = self.gamma*moment_params['v_b'+str(idx+1)] - lr*grad_tape['d_biases'+str(idx+1)]
 
-                params['weights'+str(idx+1)] -= self.beta_1*(moment_params['v_w'+str(idx+1)] - moment_params['v_w_prev'+str(idx+1)])
-                params['biases'+str(idx+1)] -= self.beta_1*(moment_params['v_b'+str(idx+1)] - moment_params['v_b_prev'+str(idx+1)])
+                params['weights'+str(idx+1)] -= self.gamma*(moment_params['v_w'+str(idx+1)] - moment_params['v_w_prev'+str(idx+1)])
+                params['biases'+str(idx+1)] -= self.gamma*(moment_params['v_b'+str(idx+1)] - moment_params['v_b_prev'+str(idx+1)])
 
                 moment_params['v_w_prev'+str(idx+1)] = moment_params['v_w'+str(idx+1)]
                 moment_params['v_b_prev'+str(idx+1)] = moment_params['v_b'+str(idx+1)]
 
         elif algo == 'rmsprop':
             for idx in range(len_param):
-                moment_params['m_b'+str(idx+1)] = self.beta_2*moment_params['m_b'+str(idx+1)] + (1-self.beta_2)*(grad_tape['d_biases'+str(idx+1)]**2)
-                moment_params['m_w'+str(idx+1)] = self.beta_2*moment_params['m_w'+str(idx+1)] + (1-self.beta_2)*(grad_tape['d_weights'+str(idx+1)]**2)
+                moment_params['m_b'+str(idx+1)] = self.beta*moment_params['m_b'+str(idx+1)] + (1-self.beta)*(grad_tape['d_biases'+str(idx+1)]**2)
+                moment_params['m_w'+str(idx+1)] = self.beta*moment_params['m_w'+str(idx+1)] + (1-self.beta)*(grad_tape['d_weights'+str(idx+1)]**2)
 
                 params['weights'+str(idx+1)] -= lr*grad_tape['d_weights'+str(idx+1)]/(np.sqrt(moment_params['m_w'+str(idx+1)])+1e-8)
                 params['biases'+str(idx+1)] -= lr*grad_tape['d_biases'+str(idx+1)]/(np.sqrt(moment_params['m_b'+str(idx+1)])+1e-8)
@@ -303,77 +306,11 @@ class FFNN:
             else:
                 print(log)
 
-def learn():
-    config_defaults={
-        'n_epochs':10,
-        'n_hidden':3,
-        'n_hidden_units':10,
-        'l2_coeff':0,
-        'lr':1e-3,
-        'optim_algo':'sgd',
-        'batch_size':16,
-        'weights_init':'random',
-        'act_func':'relu',
-        'loss_func':'cross_ent',
-        'relu_param':0
-    }
-    wandb.init(config=config_defaults)
-    config = wandb.config
-    X = x_train.T
-    X_valid = x_valid.T
-    Y_valid = y_valid
-    Y = y_train
-    n_class= 10
-    class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress',
-               'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
-
-    layers = []
-    for i in range(config.n_hidden+2):
-        if i == 0:
-            layers.append(X.shape[0])
-        elif i == config.n_hidden+1:
-            layers.append(n_class)
-        else:
-            layers.append(config.n_hidden_units)
-        i = i+1
-    
-    output_act = 'softmax'
-    act_fn = config.act_func
-
-    acts = []
-    for i in range(config.n_hidden+1):
-        if i == config.n_hidden:
-            acts.append(output_act)
-        else:
-            acts.append(act_fn)
-        i = i+1
-    
-    wandb.run.name = config.weights_init+'_'+ config.optim_algo +'_'+ config.act_func + '_bs_' + str(config.batch_size)+'_layers_'+str(config.n_hidden)+'_neurons_'+str(config.n_hidden_units)
-    model = FFNN(net_size=layers,layer_act=acts,init_wb=config.weights_init,lr=config.lr,opt=config.optim_algo,\
-                 lamda=config.l2_coeff,batch_size=config.batch_size,n_epochs=config.n_epochs,loss=config.loss_func,relu_param=config.relu_param)
-    model.train(X,Y,X_valid,Y_valid)
-    y_test_pred,_ = model.predict(x_test.T)
-    cm = confusion_matrix(y_test, y_test_pred)
-    cm_norm = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis]
-    fig, ax = plt.subplots(figsize=(8, 6))
-    sns.heatmap(
-        cm_norm, annot=True, cmap="Blues", square=True, xticklabels=class_names, yticklabels=class_names
-    )
-    plt.ylabel("True label")
-    plt.xlabel("Predicted label")
-    # Log the confusion matrix plot to wandb
-    wandb.log({"Confusion Matrix":wandb.Image(fig)})
-    fig.clf()
-    plt.close('all')
-    # log = {'conf_matrix':wandb.plot.confusion_matrix(y_true=y_test,preds=y_test_pred,class_names=class_names)}
-    # wandb.log(log)
-    # wandb.log({'conf_mat_'+wandb.run.name:wandb.plot.confusion_matrix(y_true=y_test,preds=y_test_pred,class_names=class_names)})
-    
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset',type=str,default='fashion_mnist',choices=['fashion_mnist','mnist'],help='Dataset choice')
-    parser.add_argument('--n_epochs', type=int, default=10, help='Number of training epochs')
+    parser.add_argument('--epochs', type=int, default=10, help='Number of training epochs')
     parser.add_argument('--n_hidden', type=int, default=5, help='Number of hidden layers')
     parser.add_argument('--n_hidden_units', type=int, default=128, help='Number of hidden units per layer')
     parser.add_argument('--l2_coeff', type=float, default=0.0, help='L2 regularization coefficient')
@@ -388,6 +325,7 @@ if __name__ == '__main__':
     parser.add_argument('--wandb_project',type=str,default='project', help='Project Name')
     parser.add_argument('--momentum',type=float,default=0.9,help='Momentum for sgdm and nag')
     parser.add_argument('--beta',type=float,default=0.999,help='For RMSProp')
+    parser.add_argument('--epsilon',type=float,default=1e-8,help='Epsilon for optimizers')
     args = parser.parse_args()
     config = vars(args)
     wandb.init(config=config,entity="viswa_ee", project="CS6910")
@@ -439,7 +377,7 @@ if __name__ == '__main__':
     
     model = FFNN(net_size=layers,layer_act=act,init_wb=args.weights_init,lr=args.lr,opt=args.optim_algo,\
                  lamda=args.l2_coeff,batch_size=args.batch_size,n_epochs=args.n_epochs,loss=args.loss_func,\
-                    relu_param=args.relu_param,gamma=args.gamma,beta=args.beta)
+                    relu_param=args.relu_param,gamma=args.gamma,beta=args.beta,epsilon=args.epsilon)
     model.train(X,Y,X_valid,Y_valid)
     y_test_pred,_ = model.predict(x_test.T)
 
