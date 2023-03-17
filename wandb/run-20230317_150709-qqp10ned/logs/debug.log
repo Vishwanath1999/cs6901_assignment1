@@ -1,0 +1,21 @@
+2023-03-17 15:07:09,391 INFO    Thread-12 :26676 [wandb_setup.py:_flush():76] Configure stats pid to 26676
+2023-03-17 15:07:09,391 INFO    Thread-12 :26676 [wandb_setup.py:_flush():76] Loading settings from C:\Users\HP\.config\wandb\settings
+2023-03-17 15:07:09,393 INFO    Thread-12 :26676 [wandb_setup.py:_flush():76] Loading settings from d:\CS6901\wandb\settings
+2023-03-17 15:07:09,393 INFO    Thread-12 :26676 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'entity': 'viswa_ee', 'project': 'CS6910', 'root_dir': 'd:\\CS6901', 'sweep_id': 'lha4f1ye', 'run_id': 'qqp10ned', 'sweep_param_path': 'd:\\CS6901\\wandb\\sweep-lha4f1ye\\config-qqp10ned.yaml'}
+2023-03-17 15:07:09,393 INFO    Thread-12 :26676 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-03-17 15:07:09,394 INFO    Thread-12 :26676 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-03-17 15:07:09,395 INFO    Thread-12 :26676 [wandb_init.py:_log_setup():506] Logging user logs to d:\CS6901\wandb\run-20230317_150709-qqp10ned\logs\debug.log
+2023-03-17 15:07:09,395 INFO    Thread-12 :26676 [wandb_init.py:_log_setup():507] Logging internal logs to d:\CS6901\wandb\run-20230317_150709-qqp10ned\logs\debug-internal.log
+2023-03-17 15:07:09,395 INFO    Thread-12 :26676 [wandb_init.py:_jupyter_setup():452] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x00000265008AB310>
+2023-03-17 15:07:09,396 INFO    Thread-12 :26676 [wandb_init.py:init():546] calling init triggers
+2023-03-17 15:07:09,396 INFO    Thread-12 :26676 [wandb_init.py:init():552] wandb.init called with sweep_config: {'act_func': 'tanh', 'batch_size': 16, 'l2_coeff': 0, 'loss_func': 'mse', 'lr': 0.0001, 'n_epochs': 5, 'n_hidden': 5, 'n_hidden_units': 32, 'optim_algo': 'adam', 'relu_param': 0.01, 'weight_init': 'xavier_uniform'}
+config: {'n_epochs': 10, 'n_hidden': 3, 'n_hidden_units': 10, 'l2_coeff': 0, 'lr': 0.001, 'optim_algo': 'sgd', 'batch_size': 16, 'weights_init': 'random', 'act_func': 'relu', 'loss_func': 'cross_ent', 'relu_param': 0}
+2023-03-17 15:07:09,397 INFO    Thread-12 :26676 [wandb_init.py:init():602] starting backend
+2023-03-17 15:07:09,397 INFO    Thread-12 :26676 [wandb_init.py:init():606] setting up manager
+2023-03-17 15:07:09,411 INFO    Thread-12 :26676 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn, using: spawn
+2023-03-17 15:07:09,431 INFO    Thread-12 :26676 [wandb_init.py:init():613] backend started and connected
+2023-03-17 15:07:09,441 INFO    Thread-12 :26676 [wandb_run.py:_config_callback():1251] config_cb None None {'act_func': 'tanh', 'batch_size': 16, 'l2_coeff': 0, 'loss_func': 'mse', 'lr': 0.0001, 'n_epochs': 5, 'n_hidden': 5, 'n_hidden_units': 32, 'optim_algo': 'adam', 'relu_param': 0.01, 'weight_init': 'xavier_uniform'}
+2023-03-17 15:07:09,442 INFO    Thread-12 :26676 [wandb_run.py:_label_probe_notebook():1204] probe notebook
+2023-03-17 15:07:09,444 INFO    Thread-12 :26676 [wandb_run.py:_label_probe_notebook():1214] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-03-17 15:07:09,444 INFO    Thread-12 :26676 [wandb_init.py:init():701] updated telemetry
+2023-03-17 15:07:09,493 INFO    Thread-12 :26676 [wandb_init.py:init():741] communicating run to backend with 60.0 second timeout

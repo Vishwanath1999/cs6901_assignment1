@@ -1,0 +1,5 @@
+2023-03-17 15:07:09,417 INFO    StreamThr :12448 [internal.py:wandb_internal():87] W&B internal server running at pid: 12448, started at: 2023-03-17 15:07:09.416297
+2023-03-17 15:07:09,420 DEBUG   HandlerThread:12448 [handler.py:handle_request():144] handle_request: status
+2023-03-17 15:07:09,446 INFO    WriterThread:12448 [datastore.py:open_for_write():85] open: d:\CS6901\wandb\run-20230317_150709-qqp10ned\run-qqp10ned.wandb
+2023-03-17 15:07:09,447 DEBUG   SenderThread:12448 [sender.py:send():336] send: header
+2023-03-17 15:07:09,494 DEBUG   SenderThread:12448 [sender.py:send():336] send: run

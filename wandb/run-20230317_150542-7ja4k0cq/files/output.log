@@ -1,0 +1,2 @@
+C:\Users\HP\AppData\Local\Temp/ipykernel_24164/2590971280.py:118: DeprecationWarning: elementwise comparison failed; this will raise an error in the future.
+  act_out == self.ELU(Wb)
