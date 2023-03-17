@@ -10,7 +10,7 @@ This is an implementation of a feedforward neural network using Numpy. The netwo
 - Keras
 
 ## Wandb Report
-Report Link: https://wandb.ai/viswa_ee/CS6910?workspace=user-viswa_ee
+Report Link: https://wandb.ai/viswa_ee/CS6910/reports/CS6910-Assignment-1--VmlldzozODE3MDkz
 
 ## Data
 The network has been trainied with a wide range of hyperparameters listed below on fashion MNIST data. The Keras package has been used to import the data. Other than that keras serves no purpose here. The images are of type 8 bit integers (uint8) between 0 and 255. They are normalize between 0 and 1 and converted to float data type.
