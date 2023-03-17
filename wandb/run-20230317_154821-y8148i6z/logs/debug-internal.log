@@ -1,0 +1,5 @@
+2023-03-17 15:48:21,901 INFO    StreamThr :5428 [internal.py:wandb_internal():87] W&B internal server running at pid: 5428, started at: 2023-03-17 15:48:21.900002
+2023-03-17 15:48:21,903 DEBUG   HandlerThread:5428 [handler.py:handle_request():144] handle_request: status
+2023-03-17 15:48:21,927 INFO    WriterThread:5428 [datastore.py:open_for_write():85] open: d:\CS6901\wandb\run-20230317_154821-y8148i6z\run-y8148i6z.wandb
+2023-03-17 15:48:21,928 DEBUG   SenderThread:5428 [sender.py:send():336] send: header
+2023-03-17 15:48:21,984 DEBUG   SenderThread:5428 [sender.py:send():336] send: run

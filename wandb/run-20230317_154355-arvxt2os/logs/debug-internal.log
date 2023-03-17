@@ -1,0 +1,570 @@
+2023-03-17 15:43:55,279 INFO    StreamThr :27144 [internal.py:wandb_internal():87] W&B internal server running at pid: 27144, started at: 2023-03-17 15:43:55.278665
+2023-03-17 15:43:55,281 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status
+2023-03-17 15:43:55,304 INFO    WriterThread:27144 [datastore.py:open_for_write():85] open: d:\CS6901\wandb\run-20230317_154355-arvxt2os\run-arvxt2os.wandb
+2023-03-17 15:43:55,305 DEBUG   SenderThread:27144 [sender.py:send():336] send: header
+2023-03-17 15:43:55,357 DEBUG   SenderThread:27144 [sender.py:send():336] send: run
+2023-03-17 15:43:56,156 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: check_version
+2023-03-17 15:43:56,159 INFO    SenderThread:27144 [dir_watcher.py:__init__():219] watching files in: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files
+2023-03-17 15:43:56,168 INFO    SenderThread:27144 [sender.py:_start_run_threads():1078] run started: arvxt2os with start time 1679048035.286643
+2023-03-17 15:43:56,168 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 15:43:56,169 INFO    SenderThread:27144 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-17 15:43:56,169 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: check_version
+2023-03-17 15:43:56,249 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: run_start
+2023-03-17 15:43:56,598 DEBUG   HandlerThread:27144 [system_info.py:__init__():31] System info init
+2023-03-17 15:43:56,598 DEBUG   HandlerThread:27144 [system_info.py:__init__():46] System info init done
+2023-03-17 15:43:56,599 INFO    HandlerThread:27144 [system_monitor.py:start():183] Starting system monitor
+2023-03-17 15:43:56,599 INFO    SystemMonitor:27144 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-03-17 15:43:56,599 INFO    HandlerThread:27144 [system_monitor.py:probe():204] Collecting system info
+2023-03-17 15:43:56,603 INFO    SystemMonitor:27144 [interfaces.py:start():187] Started cpu monitoring
+2023-03-17 15:43:56,604 INFO    SystemMonitor:27144 [interfaces.py:start():187] Started disk monitoring
+2023-03-17 15:43:56,604 INFO    SystemMonitor:27144 [interfaces.py:start():187] Started gpu monitoring
+2023-03-17 15:43:56,611 INFO    SystemMonitor:27144 [interfaces.py:start():187] Started memory monitoring
+2023-03-17 15:43:56,621 INFO    SystemMonitor:27144 [interfaces.py:start():187] Started network monitoring
+2023-03-17 15:43:56,640 DEBUG   HandlerThread:27144 [system_info.py:probe():195] Probing system
+2023-03-17 15:43:56,641 DEBUG   HandlerThread:27144 [system_info.py:_probe_git():180] Probing git
+2023-03-17 15:43:56,641 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:43:56,641 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:43:56,724 DEBUG   HandlerThread:27144 [system_info.py:_probe_git():188] Probing git done
+2023-03-17 15:43:56,724 DEBUG   HandlerThread:27144 [system_info.py:probe():240] Probing system done
+2023-03-17 15:43:56,724 DEBUG   HandlerThread:27144 [system_monitor.py:probe():213] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.9.7', 'heartbeatAt': '2023-03-17T10:13:56.640173', 'startedAt': '2023-03-17T10:13:55.251511', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '<python with no main file>', 'git': {'remote': 'https://github.com/Vishwanath1999/CS6901.git', 'commit': '67394ca2a4b5cf62a2a8662da6edd09393be2486'}, 'email': 'viswasankar98@gmail.com', 'root': 'D:/CS6901', 'host': 'darkAngel', 'username': 'HP', 'executable': 'c:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python39\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1600.0, 'min': 0.0, 'max': 1800.0}, 'cpu_freq_per_core': [{'current': 1600.0, 'min': 0.0, 'max': 1800.0}], 'disk': {'total': 367.49511337280273, 'used': 135.96261978149414}, 'gpu': 'NVIDIA GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce 940MX', 'memory_total': 2147483648}], 'memory': {'total': 15.88699722290039}}
+2023-03-17 15:43:56,725 INFO    HandlerThread:27144 [system_monitor.py:probe():214] Finished collecting system info
+2023-03-17 15:43:56,725 INFO    HandlerThread:27144 [system_monitor.py:probe():217] Publishing system info
+2023-03-17 15:43:56,725 DEBUG   HandlerThread:27144 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-17 15:43:56,726 DEBUG   HandlerThread:27144 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-17 15:43:56,726 INFO    HandlerThread:27144 [system_monitor.py:probe():219] Finished publishing system info
+2023-03-17 15:43:56,743 DEBUG   SenderThread:27144 [sender.py:send():336] send: files
+2023-03-17 15:43:56,743 INFO    SenderThread:27144 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-03-17 15:43:56,761 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:43:56,762 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:43:57,067 DEBUG   SenderThread:27144 [sender.py:send():336] send: telemetry
+2023-03-17 15:43:57,068 DEBUG   SenderThread:27144 [sender.py:send():336] send: telemetry
+2023-03-17 15:43:57,068 DEBUG   SenderThread:27144 [sender.py:send():336] send: run
+2023-03-17 15:43:57,167 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\config.yaml
+2023-03-17 15:43:57,168 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\wandb-metadata.json
+2023-03-17 15:43:57,168 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\requirements.txt
+2023-03-17 15:43:57,168 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\wandb-summary.json
+2023-03-17 15:43:57,394 INFO    SenderThread:27144 [sender.py:send_run():955] updated run: arvxt2os
+2023-03-17 15:43:58,106 INFO    wandb-upload_0:27144 [upload_job.py:push():138] Uploaded file C:\Users\HP\AppData\Local\Temp\tmphclapdstwandb\0p4uajin-wandb-metadata.json
+2023-03-17 15:43:58,669 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:43:58,669 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:43:58,852 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:43:58,852 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:00,407 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:00,872 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:00,872 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:01,076 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:01,076 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:03,095 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:03,096 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:03,270 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:03,271 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:05,276 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:05,276 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:05,444 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:05,462 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:05,462 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:07,471 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:07,471 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:07,656 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:07,657 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:09,674 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:09,674 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:09,859 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:09,860 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:10,468 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:11,770 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:44:11,770 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:44:11,872 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:11,874 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:12,053 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:12,053 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:14,068 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:14,069 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:14,254 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:14,254 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:16,142 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:16,269 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:16,270 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:16,456 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:16,456 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:18,475 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:18,475 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:18,655 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:18,655 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:20,683 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:20,683 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:20,867 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:20,868 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:21,188 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:22,886 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:22,886 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:23,093 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:23,093 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:25,105 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:25,105 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:25,295 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:25,295 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:26,244 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:26,783 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:44:26,784 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:44:27,305 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:27,305 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:27,469 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\config.yaml
+2023-03-17 15:44:27,492 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:27,492 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:29,726 ERROR   gpu       :27144 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-17 15:44:29,733 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:29,733 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:31,741 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:31,742 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:31,926 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:31,927 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:32,122 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:33,944 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:33,944 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:34,128 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:34,128 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:36,151 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:36,151 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:36,334 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:36,336 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:37,159 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:38,358 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:38,358 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:38,544 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:38,545 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:40,563 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:40,564 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:40,747 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:40,748 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:41,811 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:44:41,812 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:44:42,773 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:42,773 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:42,961 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:42,961 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:43,178 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:44,986 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:44,987 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:45,183 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:45,184 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:47,204 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:47,205 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:47,388 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:47,388 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:48,214 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:49,366 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 15:44:49,368 DEBUG   SenderThread:27144 [sender.py:send():336] send: history
+2023-03-17 15:44:49,368 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 15:44:49,372 INFO    SenderThread:27144 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-17 15:44:49,395 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:49,395 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:49,581 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:49,581 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:49,639 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\wandb-summary.json
+2023-03-17 15:44:51,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:51,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:51,784 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:51,785 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:53,411 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:44:53,795 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:53,797 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:53,981 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:53,981 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:55,996 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:55,996 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:56,183 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:56,184 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:56,634 DEBUG   SystemMonitor:27144 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-03-17 15:44:56,636 DEBUG   SenderThread:27144 [sender.py:send():336] send: stats
+2023-03-17 15:44:56,807 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:44:56,808 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:44:58,199 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:58,199 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:44:58,388 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:58,389 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:44:59,123 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:00,408 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:00,409 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:00,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:00,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:02,829 ERROR   gpu       :27144 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-17 15:45:02,838 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:02,839 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:04,174 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:04,848 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:04,849 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:05,042 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:05,043 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:07,063 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:07,063 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:07,255 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:07,256 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:09,218 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:09,272 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:09,272 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:09,456 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:09,457 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:11,463 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:11,463 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:11,651 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:11,652 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:11,822 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:45:11,824 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:45:13,671 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:13,671 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:13,881 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:13,882 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:15,163 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:15,897 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:15,897 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:16,093 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:16,094 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:18,131 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:18,131 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:18,318 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:18,318 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:20,204 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:20,340 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:20,340 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:20,526 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:20,527 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:22,535 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:22,535 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:22,709 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:22,709 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:24,720 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:24,720 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:24,907 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:24,908 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:25,247 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:26,649 DEBUG   SenderThread:27144 [sender.py:send():336] send: stats
+2023-03-17 15:45:26,825 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:45:26,825 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:45:26,915 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:26,915 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:27,094 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:27,094 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:29,108 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:29,108 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:29,295 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:29,295 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:31,032 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:31,303 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:31,303 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:31,489 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:31,489 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:33,490 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:33,490 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:33,660 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:33,660 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:35,897 ERROR   gpu       :27144 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-17 15:45:35,905 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:35,905 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:36,073 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:37,928 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:37,929 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:38,105 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:38,106 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:40,109 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:40,109 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:40,283 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:40,283 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:40,478 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 15:45:40,481 DEBUG   SenderThread:27144 [sender.py:send():336] send: history
+2023-03-17 15:45:40,481 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 15:45:40,481 INFO    SenderThread:27144 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-17 15:45:41,471 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\wandb-summary.json
+2023-03-17 15:45:41,491 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:41,831 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:45:41,831 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:45:42,296 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:42,306 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:42,481 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:42,501 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:44,521 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:44,521 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:44,713 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:44,715 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:46,724 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:46,725 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:46,908 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:46,908 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:47,185 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:48,925 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:48,926 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:49,112 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:49,113 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:51,137 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:51,137 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:51,321 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:51,322 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:52,220 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:53,324 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:53,324 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:53,508 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:53,508 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:55,524 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:55,524 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:55,700 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:55,700 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:56,651 DEBUG   SenderThread:27144 [sender.py:send():336] send: stats
+2023-03-17 15:45:56,846 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:45:56,847 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:45:57,714 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:57,715 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:57,882 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:57,894 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:45:58,186 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:45:59,913 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:45:59,913 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:00,091 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:00,091 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:02,102 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:02,102 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:02,282 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:02,282 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:03,227 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:04,296 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:04,297 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:04,480 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:04,481 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:06,498 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:06,499 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:06,692 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:06,693 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:08,247 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:08,916 ERROR   gpu       :27144 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-17 15:46:08,928 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:08,929 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:10,935 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:10,935 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:11,110 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:11,110 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:11,853 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:46:11,853 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:46:13,126 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:13,126 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:13,309 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:13,310 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:14,194 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:15,335 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:15,335 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:15,516 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:15,516 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:17,528 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:17,529 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:17,713 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:17,713 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:19,217 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:19,732 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:19,732 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:19,903 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:19,903 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:21,904 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:21,904 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:22,098 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:22,099 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:24,117 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:24,117 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:24,246 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:24,296 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:24,296 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:26,299 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:26,299 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:26,479 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:26,479 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:26,659 DEBUG   SenderThread:27144 [sender.py:send():336] send: stats
+2023-03-17 15:46:26,860 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:46:26,860 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:46:28,491 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:28,491 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:28,663 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:28,663 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:30,178 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:30,673 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:30,673 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:30,849 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:30,849 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:32,478 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 15:46:32,488 DEBUG   SenderThread:27144 [sender.py:send():336] send: history
+2023-03-17 15:46:32,488 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 15:46:32,488 INFO    SenderThread:27144 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-17 15:46:32,866 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:32,866 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:32,886 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\wandb-summary.json
+2023-03-17 15:46:33,028 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:33,028 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:35,043 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:35,043 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:35,228 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:35,229 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:35,502 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:37,240 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:37,240 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:37,424 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:37,424 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:39,425 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:39,425 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:39,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:39,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:40,540 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:41,851 ERROR   gpu       :27144 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-17 15:46:41,858 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:41,859 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:41,889 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:46:41,890 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:46:43,867 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:43,868 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:44,052 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:44,053 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:46,064 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:46,064 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:46,214 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:46,251 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:46,251 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:48,262 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:48,263 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:48,447 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:48,448 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:50,462 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:50,462 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:50,647 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:50,647 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:51,266 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:52,662 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:52,662 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:52,844 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:52,844 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:54,869 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:54,869 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:55,057 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:55,058 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:56,313 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:46:56,662 DEBUG   SenderThread:27144 [sender.py:send():336] send: stats
+2023-03-17 15:46:56,911 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:46:56,912 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:46:57,074 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:57,075 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:57,259 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:57,259 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:59,277 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:59,277 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:46:59,459 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:46:59,460 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:01,481 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:01,481 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:01,667 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:01,675 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:02,286 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:03,689 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:03,689 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:03,877 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:03,878 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:05,898 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:05,898 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:06,086 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:06,087 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:07,341 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:08,100 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:08,100 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:08,288 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:08,290 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:10,304 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:10,304 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:10,491 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:10,492 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:11,910 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:47:11,911 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:47:12,506 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:12,506 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:12,687 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:12,687 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:13,226 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:14,945 ERROR   gpu       :27144 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-17 15:47:14,956 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:14,957 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:16,972 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:16,972 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:17,157 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:17,158 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:18,257 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:19,176 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:19,176 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:19,363 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:19,363 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:21,382 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:21,383 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:21,566 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:21,566 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:23,291 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:23,585 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:23,585 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:23,777 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:23,777 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:24,165 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-17 15:47:24,167 DEBUG   SenderThread:27144 [sender.py:send():336] send: history
+2023-03-17 15:47:24,167 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: summary_record
+2023-03-17 15:47:24,172 INFO    SenderThread:27144 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-17 15:47:24,274 INFO    Thread-17 :27144 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230317_154355-arvxt2os\files\wandb-summary.json
+2023-03-17 15:47:25,791 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:25,791 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:25,975 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:25,975 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:26,676 DEBUG   SenderThread:27144 [sender.py:send():336] send: stats
+2023-03-17 15:47:26,924 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:47:26,925 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:47:27,984 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:27,984 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:28,169 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:28,169 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:29,249 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:30,184 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:30,185 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:30,379 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:30,380 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:32,415 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:32,415 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:32,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:32,596 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:34,309 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:34,608 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:34,608 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:34,795 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:34,796 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:36,814 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:36,815 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:36,999 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:37,000 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:39,009 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:39,009 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:39,199 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:39,199 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:39,331 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:41,209 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:41,209 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:41,394 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:41,395 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:41,943 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-17 15:47:41,943 DEBUG   SenderThread:27144 [sender.py:send_request():363] send_request: stop_status
+2023-03-17 15:47:43,411 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:43,411 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:43,598 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:43,599 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:45,247 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:45,617 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:45,617 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:45,806 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:45,807 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:48,041 ERROR   gpu       :27144 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-17 15:47:48,052 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:48,053 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:50,068 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:50,068 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:50,256 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:50,256 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:50,278 DEBUG   HandlerThread:27144 [handler.py:handle_request():144] handle_request: status_report
+2023-03-17 15:47:52,269 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:52,269 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-17 15:47:52,457 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-17 15:47:52,458 ERROR   gpu       :27144 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
