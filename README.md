@@ -10,7 +10,7 @@ This is an implementation of a feedforward neural network using Numpy. The netwo
 - Keras
 
 ## Data
-The network has been trainied with a wide range of hyperparameters listed below on fashion MNIST data. The Keras package has been used to import the data. Other than that keras serves no purpose here.
+The network has been trainied with a wide range of hyperparameters listed below on fashion MNIST data. The Keras package has been used to import the data. Other than that keras serves no purpose here. The images are of type 8 bit integers (uint8) between 0 and 255. They are normalize between 0 and 1 and converted to float data type.
 
 ```
 from keras.datasets fashion_mnist,mnist
@@ -93,4 +93,4 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |activation|sigmoid|choices: ["identity", "sigmoid", "tanh", "ReLU"]|
 
 ## Confusion matrix for fashion MNIST
-![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix2.png)
+![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix.png)
