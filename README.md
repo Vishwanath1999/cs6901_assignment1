@@ -97,6 +97,9 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 ## Confusion matrix for fashion MNIST
 ![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix.png)
 
+## Confusion matrix for MNIST
+![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/conf_mat_mnist.png)
+
 ## References
 - https://ml-cheatsheet.readthedocs.io/en/latest/index.html
 - [Sentdex - Neural Network from scratch](https://youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3)
