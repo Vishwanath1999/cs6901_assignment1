@@ -1,0 +1,486 @@
+2023-03-18 01:42:22,781 INFO    StreamThr :22036 [internal.py:wandb_internal():87] W&B internal server running at pid: 22036, started at: 2023-03-18 01:42:22.780047
+2023-03-18 01:42:22,784 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status
+2023-03-18 01:42:22,800 INFO    WriterThread:22036 [datastore.py:open_for_write():85] open: d:\CS6901\wandb\run-20230318_014222-osc47dxh\run-osc47dxh.wandb
+2023-03-18 01:42:22,800 DEBUG   SenderThread:22036 [sender.py:send():336] send: header
+2023-03-18 01:42:22,854 DEBUG   SenderThread:22036 [sender.py:send():336] send: run
+2023-03-18 01:42:23,470 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: check_version
+2023-03-18 01:42:23,474 INFO    SenderThread:22036 [dir_watcher.py:__init__():219] watching files in: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files
+2023-03-18 01:42:23,482 INFO    SenderThread:22036 [sender.py:_start_run_threads():1078] run started: osc47dxh with start time 1679083942.786543
+2023-03-18 01:42:23,482 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:42:23,483 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:42:23,483 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: check_version
+2023-03-18 01:42:23,544 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: run_start
+2023-03-18 01:42:23,886 DEBUG   HandlerThread:22036 [system_info.py:__init__():31] System info init
+2023-03-18 01:42:23,886 DEBUG   HandlerThread:22036 [system_info.py:__init__():46] System info init done
+2023-03-18 01:42:23,886 INFO    HandlerThread:22036 [system_monitor.py:start():183] Starting system monitor
+2023-03-18 01:42:23,887 INFO    SystemMonitor:22036 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-03-18 01:42:23,887 INFO    HandlerThread:22036 [system_monitor.py:probe():204] Collecting system info
+2023-03-18 01:42:23,891 INFO    SystemMonitor:22036 [interfaces.py:start():187] Started cpu monitoring
+2023-03-18 01:42:23,892 INFO    SystemMonitor:22036 [interfaces.py:start():187] Started disk monitoring
+2023-03-18 01:42:23,892 INFO    SystemMonitor:22036 [interfaces.py:start():187] Started gpu monitoring
+2023-03-18 01:42:23,899 INFO    SystemMonitor:22036 [interfaces.py:start():187] Started memory monitoring
+2023-03-18 01:42:23,917 INFO    SystemMonitor:22036 [interfaces.py:start():187] Started network monitoring
+2023-03-18 01:42:23,926 DEBUG   HandlerThread:22036 [system_info.py:probe():195] Probing system
+2023-03-18 01:42:23,928 DEBUG   HandlerThread:22036 [system_info.py:_probe_git():180] Probing git
+2023-03-18 01:42:23,928 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:23,929 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:24,012 DEBUG   HandlerThread:22036 [system_info.py:_probe_git():188] Probing git done
+2023-03-18 01:42:24,013 DEBUG   HandlerThread:22036 [system_info.py:probe():240] Probing system done
+2023-03-18 01:42:24,013 DEBUG   HandlerThread:22036 [system_monitor.py:probe():213] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.9.7', 'heartbeatAt': '2023-03-17T20:12:23.926949', 'startedAt': '2023-03-17T20:12:22.756563', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '<python with no main file>', 'git': {'remote': 'https://github.com/Vishwanath1999/CS6901.git', 'commit': 'a8a53985598b7466aac7b7c875eb3a9e7475e560'}, 'email': 'viswasankar98@gmail.com', 'root': 'D:/CS6901', 'host': 'darkAngel', 'username': 'HP', 'executable': 'c:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python39\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1600.0, 'min': 0.0, 'max': 1800.0}, 'cpu_freq_per_core': [{'current': 1600.0, 'min': 0.0, 'max': 1800.0}], 'disk': {'total': 367.49511337280273, 'used': 135.99199676513672}, 'gpu': 'NVIDIA GeForce 940MX', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce 940MX', 'memory_total': 2147483648}], 'memory': {'total': 15.88699722290039}}
+2023-03-18 01:42:24,013 INFO    HandlerThread:22036 [system_monitor.py:probe():214] Finished collecting system info
+2023-03-18 01:42:24,013 INFO    HandlerThread:22036 [system_monitor.py:probe():217] Publishing system info
+2023-03-18 01:42:24,013 DEBUG   HandlerThread:22036 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-18 01:42:24,014 DEBUG   HandlerThread:22036 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-18 01:42:24,014 INFO    HandlerThread:22036 [system_monitor.py:probe():219] Finished publishing system info
+2023-03-18 01:42:24,034 DEBUG   SenderThread:22036 [sender.py:send():336] send: files
+2023-03-18 01:42:24,035 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-03-18 01:42:24,055 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:42:24,055 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:42:24,357 DEBUG   SenderThread:22036 [sender.py:send():336] send: telemetry
+2023-03-18 01:42:24,357 DEBUG   SenderThread:22036 [sender.py:send():336] send: telemetry
+2023-03-18 01:42:24,357 DEBUG   SenderThread:22036 [sender.py:send():336] send: run
+2023-03-18 01:42:24,477 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\config.yaml
+2023-03-18 01:42:24,477 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-metadata.json
+2023-03-18 01:42:24,478 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:42:24,478 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\requirements.txt
+2023-03-18 01:42:24,694 INFO    SenderThread:22036 [sender.py:send_run():955] updated run: osc47dxh
+2023-03-18 01:42:25,000 INFO    wandb-upload_0:22036 [upload_job.py:push():138] Uploaded file C:\Users\HP\AppData\Local\Temp\tmpfe_h56tfwandb\w1riw9bd-wandb-metadata.json
+2023-03-18 01:42:25,950 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:25,950 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:26,124 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:26,125 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:28,143 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:28,143 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:28,331 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:28,331 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:28,748 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:42:30,351 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:30,352 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:30,534 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:30,534 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:32,544 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:32,544 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:32,729 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:32,729 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:33,798 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:42:34,746 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:34,746 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:34,924 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:34,924 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:35,316 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:42:35,317 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:42:35,318 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:42:35,323 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:42:35,651 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:42:36,945 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:36,945 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:37,132 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:37,132 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:39,059 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:42:39,060 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:42:39,144 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:39,144 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:39,331 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:39,332 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:39,358 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:42:41,342 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:41,343 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:41,530 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:41,531 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:43,551 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:43,551 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:43,736 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:43,736 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:44,403 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:42:45,754 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:45,755 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:45,941 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:45,942 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:46,445 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:42:46,446 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:42:46,446 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:42:46,451 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:42:46,751 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:42:47,956 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:47,956 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:48,145 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:48,146 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:49,477 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:42:50,157 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:50,157 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:50,369 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:50,369 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:52,396 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:52,396 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:52,580 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:52,580 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:54,057 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:42:54,059 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:42:54,594 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:54,594 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:54,779 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:54,779 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:55,368 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:42:55,834 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\config.yaml
+2023-03-18 01:42:57,023 ERROR   gpu       :22036 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-18 01:42:57,035 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:57,035 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:59,054 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:59,054 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:42:59,238 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:42:59,238 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:00,751 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:00,890 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:43:00,892 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:43:00,892 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:43:00,898 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:43:00,902 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:43:01,260 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:01,260 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:01,445 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:01,446 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:03,462 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:03,462 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:03,642 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:03,643 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:05,658 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:05,658 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:05,841 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:05,842 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:05,929 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:07,852 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:07,853 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:08,037 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:08,037 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:09,053 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:43:09,054 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:43:10,053 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:10,053 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:10,240 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:10,241 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:11,381 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:12,261 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:12,261 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:12,445 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:12,445 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:13,370 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:43:13,372 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:43:13,373 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:43:13,383 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:43:14,041 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:43:14,457 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:14,458 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:14,647 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:14,648 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:16,397 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:16,686 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:16,686 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:16,881 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:16,882 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:18,892 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:18,892 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:19,081 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:19,081 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:21,101 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:21,101 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:21,289 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:21,290 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:21,440 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:23,303 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:23,304 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:23,495 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:23,496 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:23,927 DEBUG   SystemMonitor:22036 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-03-18 01:43:23,928 DEBUG   SenderThread:22036 [sender.py:send():336] send: stats
+2023-03-18 01:43:24,054 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:43:24,055 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:43:24,512 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:43:24,513 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:43:24,513 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:43:24,514 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:43:25,218 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:43:25,545 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:25,545 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:25,733 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:25,734 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:26,549 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:27,744 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:27,745 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:27,930 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:27,930 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:30,173 ERROR   gpu       :22036 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-18 01:43:30,182 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:30,182 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:31,607 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:32,199 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:32,199 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:32,382 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:32,383 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:34,404 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:34,404 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:34,592 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:34,594 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:35,767 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:43:35,768 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:43:35,768 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:43:35,769 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:43:36,383 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:43:36,611 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:36,612 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:36,778 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:36,797 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:36,798 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:38,809 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:38,810 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:38,998 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:39,000 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:39,054 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:43:39,055 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:43:41,026 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:41,026 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:41,213 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:41,214 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:42,378 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:43,235 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:43,235 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:43,422 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:43,423 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:45,433 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:45,433 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:45,617 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:45,617 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:47,409 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:47,632 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:47,632 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:47,817 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:47,818 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:49,186 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:43:49,187 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:43:49,188 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:43:49,189 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:43:49,640 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:43:49,838 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:49,839 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:50,020 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:50,020 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:52,035 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:52,036 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:52,221 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:52,221 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:53,229 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:53,931 DEBUG   SenderThread:22036 [sender.py:send():336] send: stats
+2023-03-18 01:43:54,055 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:43:54,056 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:43:54,237 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:54,237 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:54,422 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:54,422 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:56,436 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:56,436 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:56,624 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:56,625 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:58,360 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:43:58,639 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:58,639 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:43:58,823 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:43:58,824 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:00,842 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:00,842 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:01,025 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:01,025 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:01,998 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:44:01,999 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:44:01,999 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:44:02,002 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:44:02,941 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:44:03,256 ERROR   gpu       :22036 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-18 01:44:03,263 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:03,263 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:04,031 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:44:05,279 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:05,279 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:05,607 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:05,607 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:07,630 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:07,630 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:07,815 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:07,815 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:09,056 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 01:44:09,057 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 01:44:09,343 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:44:09,822 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:09,822 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:10,010 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:10,011 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:12,019 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:12,019 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:12,206 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:12,207 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:12,372 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:44:12,373 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:44:12,373 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:44:12,376 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:44:13,020 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:44:14,223 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:14,223 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:14,390 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:44:14,411 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:14,411 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:16,418 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:16,418 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:16,606 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:16,606 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:18,626 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:18,626 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:18,813 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:18,814 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:19,438 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:44:20,827 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:20,828 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:21,019 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:21,020 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:21,975 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:44:21,976 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:44:21,977 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:44:21,978 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:44:22,105 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:44:23,031 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:23,031 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Unknown Error
+2023-03-18 01:44:23,044 DEBUG   SenderThread:22036 [sender.py:send():336] send: files
+2023-03-18 01:44:23,044 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 01:44:23,044 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file media\images\Confusion Matrix_10_5e124b4bd437745c09ca.png with policy now
+2023-03-18 01:44:23,046 DEBUG   SenderThread:22036 [sender.py:send():336] send: history
+2023-03-18 01:44:23,047 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 01:44:23,050 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:44:23,108 DEBUG   SenderThread:22036 [sender.py:send():336] send: telemetry
+2023-03-18 01:44:23,110 DEBUG   SenderThread:22036 [sender.py:send():336] send: exit
+2023-03-18 01:44:23,110 INFO    SenderThread:22036 [sender.py:send_exit():559] handling exit code: 0
+2023-03-18 01:44:23,110 INFO    SenderThread:22036 [sender.py:send_exit():561] handling runtime: 119
+2023-03-18 01:44:23,111 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:44:23,111 INFO    SenderThread:22036 [sender.py:send_exit():567] send defer
+2023-03-18 01:44:23,111 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,111 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-18 01:44:23,112 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,112 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-18 01:44:23,112 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 1
+2023-03-18 01:44:23,112 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,112 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-18 01:44:23,113 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,113 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-18 01:44:23,113 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 2
+2023-03-18 01:44:23,113 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,113 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-18 01:44:23,113 INFO    HandlerThread:22036 [system_monitor.py:finish():193] Stopping system monitor
+2023-03-18 01:44:23,115 DEBUG   SystemMonitor:22036 [system_monitor.py:_start():168] Finished system metrics aggregation loop
+2023-03-18 01:44:23,115 DEBUG   SystemMonitor:22036 [system_monitor.py:_start():172] Publishing last batch of metrics
+2023-03-18 01:44:23,116 INFO    HandlerThread:22036 [interfaces.py:finish():199] Joined cpu monitor
+2023-03-18 01:44:23,116 INFO    HandlerThread:22036 [interfaces.py:finish():199] Joined disk monitor
+2023-03-18 01:44:23,122 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:44:23,122 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\media\images\Confusion Matrix_10_5e124b4bd437745c09ca.png
+2023-03-18 01:44:23,123 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\media
+2023-03-18 01:44:23,123 INFO    Thread-17 :22036 [dir_watcher.py:_on_file_created():278] file/dir created: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\media\images
+2023-03-18 01:44:23,218 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:23,218 ERROR   gpu       :22036 [interfaces.py:monitor():141] Failed to sample metric: Not Supported
+2023-03-18 01:44:23,251 ERROR   gpu       :22036 [interfaces.py:aggregate():158] Failed to serialize metric: division by zero
+2023-03-18 01:44:23,252 INFO    HandlerThread:22036 [interfaces.py:finish():199] Joined gpu monitor
+2023-03-18 01:44:23,252 INFO    HandlerThread:22036 [interfaces.py:finish():199] Joined memory monitor
+2023-03-18 01:44:23,252 INFO    HandlerThread:22036 [interfaces.py:finish():199] Joined network monitor
+2023-03-18 01:44:23,252 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,253 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-18 01:44:23,253 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 3
+2023-03-18 01:44:23,253 DEBUG   SenderThread:22036 [sender.py:send():336] send: stats
+2023-03-18 01:44:23,253 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,253 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-18 01:44:23,253 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,253 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-18 01:44:23,254 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 4
+2023-03-18 01:44:23,254 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,254 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-18 01:44:23,254 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,254 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-18 01:44:23,254 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 5
+2023-03-18 01:44:23,254 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,254 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-18 01:44:23,255 DEBUG   SenderThread:22036 [sender.py:send():336] send: summary
+2023-03-18 01:44:23,255 INFO    SenderThread:22036 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 01:44:23,256 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,256 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-18 01:44:23,256 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 6
+2023-03-18 01:44:23,256 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,257 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-18 01:44:23,257 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,257 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-18 01:44:23,262 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 01:44:23,581 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 7
+2023-03-18 01:44:23,581 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,582 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-18 01:44:23,582 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,582 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-18 01:44:23,582 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 8
+2023-03-18 01:44:23,582 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,582 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-18 01:44:23,583 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,583 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-18 01:44:23,583 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 9
+2023-03-18 01:44:23,583 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:23,583 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-18 01:44:23,584 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:23,584 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-18 01:44:23,584 INFO    SenderThread:22036 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-03-18 01:44:23,922 INFO    wandb-upload_0:22036 [upload_job.py:push():138] Uploaded file C:\Users\HP\AppData\Local\Temp\tmpfe_h56tfwandb\31lnk74c-media/images/Confusion Matrix_10_5e124b4bd437745c09ca.png
+2023-03-18 01:44:24,118 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 01:44:24,135 INFO    SenderThread:22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\config.yaml
+2023-03-18 01:44:24,135 INFO    SenderThread:22036 [dir_watcher.py:_on_file_modified():295] file/dir modified: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:44:24,135 INFO    SenderThread:22036 [dir_watcher.py:finish():395] scan: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files
+2023-03-18 01:44:24,136 INFO    SenderThread:22036 [dir_watcher.py:finish():409] scan save: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\config.yaml config.yaml
+2023-03-18 01:44:24,136 INFO    SenderThread:22036 [dir_watcher.py:finish():409] scan save: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\requirements.txt requirements.txt
+2023-03-18 01:44:24,139 INFO    SenderThread:22036 [dir_watcher.py:finish():409] scan save: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-metadata.json wandb-metadata.json
+2023-03-18 01:44:24,139 INFO    SenderThread:22036 [dir_watcher.py:finish():409] scan save: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json wandb-summary.json
+2023-03-18 01:44:24,144 INFO    SenderThread:22036 [dir_watcher.py:finish():409] scan save: d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\media\images\Confusion Matrix_10_5e124b4bd437745c09ca.png media\images\Confusion Matrix_10_5e124b4bd437745c09ca.png
+2023-03-18 01:44:24,147 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 10
+2023-03-18 01:44:24,150 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 01:44:24,150 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:24,151 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-18 01:44:24,151 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:24,152 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-18 01:44:24,152 INFO    SenderThread:22036 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-18 01:44:24,951 INFO    wandb-upload_1:22036 [upload_job.py:push():138] Uploaded file d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\requirements.txt
+2023-03-18 01:44:25,010 INFO    wandb-upload_0:22036 [upload_job.py:push():138] Uploaded file d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\config.yaml
+2023-03-18 01:44:25,038 INFO    wandb-upload_2:22036 [upload_job.py:push():138] Uploaded file d:\CS6901\wandb\run-20230318_014222-osc47dxh\files\wandb-summary.json
+2023-03-18 01:44:25,129 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 01:44:25,129 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 01:44:25,253 INFO    Thread-16 :22036 [sender.py:transition_state():587] send defer: 11
+2023-03-18 01:44:25,253 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:25,253 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-18 01:44:25,254 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:25,254 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-18 01:44:25,254 INFO    SenderThread:22036 [file_pusher.py:join():169] waiting for file pusher
+2023-03-18 01:44:25,254 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 12
+2023-03-18 01:44:25,254 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:25,254 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-18 01:44:25,254 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:25,254 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-18 01:44:26,091 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 13
+2023-03-18 01:44:26,092 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:26,092 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-18 01:44:26,092 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:26,092 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-18 01:44:26,092 INFO    SenderThread:22036 [sender.py:transition_state():587] send defer: 14
+2023-03-18 01:44:26,093 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 01:44:26,093 INFO    HandlerThread:22036 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-18 01:44:26,093 DEBUG   SenderThread:22036 [sender.py:send():336] send: final
+2023-03-18 01:44:26,093 DEBUG   SenderThread:22036 [sender.py:send():336] send: footer
+2023-03-18 01:44:26,093 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: defer
+2023-03-18 01:44:26,093 INFO    SenderThread:22036 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-18 01:44:26,094 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 01:44:26,094 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: server_info
+2023-03-18 01:44:26,094 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-18 01:44:26,095 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-18 01:44:26,095 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 01:44:26,096 DEBUG   SenderThread:22036 [sender.py:send_request():363] send_request: server_info
+2023-03-18 01:44:26,671 DEBUG   HandlerThread:22036 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-18 01:44:26,671 INFO    HandlerThread:22036 [handler.py:finish():842] shutting down handler
+2023-03-18 01:44:27,109 INFO    WriterThread:22036 [datastore.py:close():298] close: d:\CS6901\wandb\run-20230318_014222-osc47dxh\run-osc47dxh.wandb
+2023-03-18 01:44:27,671 INFO    SenderThread:22036 [sender.py:finish():1504] shutting down sender
+2023-03-18 01:44:27,671 INFO    SenderThread:22036 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-18 01:44:27,671 INFO    SenderThread:22036 [file_pusher.py:join():169] waiting for file pusher

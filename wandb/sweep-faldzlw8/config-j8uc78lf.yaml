@@ -1,0 +1,8 @@
+wandb_version: 1
+
+act_func:
+  value: relu
+optim_algo:
+  value: sgdm
+weights_init:
+  value: xavier_uniform

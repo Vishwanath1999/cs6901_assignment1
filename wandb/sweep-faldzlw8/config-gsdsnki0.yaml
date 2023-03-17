@@ -1,0 +1,8 @@
+wandb_version: 1
+
+act_func:
+  value: sigmoid
+optim_algo:
+  value: adam
+weights_init:
+  value: xavier_uniform
