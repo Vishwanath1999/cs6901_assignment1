@@ -1,0 +1,24 @@
+wandb_version: 1
+
+act_func:
+  value: identity
+batch_size:
+  value: 16
+l2_coeff:
+  value: 0.0005
+loss_func:
+  value: mse
+lr:
+  value: 0.0001
+n_epochs:
+  value: 10
+n_hidden:
+  value: 4
+n_hidden_units:
+  value: 32
+optim_algo:
+  value: rmsprop
+relu_param:
+  value: 0.1
+weights_init:
+  value: xavier_uniform

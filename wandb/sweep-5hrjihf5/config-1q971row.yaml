@@ -1,0 +1,24 @@
+wandb_version: 1
+
+act_func:
+  value: sigmoid
+batch_size:
+  value: 64
+l2_coeff:
+  value: 0.0005
+loss_func:
+  value: cross_ent
+lr:
+  value: 0.001
+n_epochs:
+  value: 5
+n_hidden:
+  value: 3
+n_hidden_units:
+  value: 32
+optim_algo:
+  value: sgd
+relu_param:
+  value: 0.001
+weights_init:
+  value: random

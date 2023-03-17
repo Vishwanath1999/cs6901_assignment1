@@ -1,0 +1,49 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.9.7",
+    "heartbeatAt": "2023-03-17T18:15:21.217105",
+    "startedAt": "2023-03-17T18:15:19.100773",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/Vishwanath1999/CS6901.git",
+        "commit": "a2382437cf56303291aa449aacad3854ff8b9b56"
+    },
+    "email": "viswasankar98@gmail.com",
+    "root": "D:/CS6901",
+    "host": "darkAngel",
+    "username": "HP",
+    "executable": "c:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1600.0,
+        "min": 0.0,
+        "max": 1800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1600.0,
+            "min": 0.0,
+            "max": 1800.0
+        }
+    ],
+    "disk": {
+        "total": 367.49511337280273,
+        "used": 135.98735427856445
+    },
+    "gpu": "NVIDIA GeForce 940MX",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce 940MX",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 15.88699722290039
+    }
+}
