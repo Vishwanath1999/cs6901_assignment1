@@ -87,7 +87,7 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |beta|0.999|Beta used by rmsprop optimizer|
 |beta1|0.9|Beta1 used by adam and nadam optimizers|
 |beta2|0.999|Beta2 used by adam and nadam optimizers|
-|epsilon|0.000001|Epsilon used by optimizers|
+|epsilon|1e-8|Epsilon used by optimizers|
 |l2_coeff|0|Weight decay used by optimizers|
 |weights_init|'xavier_uniform'|choices: ["random", "xavier_uniform"]|
 |num_layers|5|Number of hidden layers used in feedforward neural network|

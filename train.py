@@ -328,7 +328,7 @@ if __name__ == '__main__':
     parser.add_argument('--epsilon',type=float,default=1e-8,help='Epsilon for optimizers')
     args = parser.parse_args()
     config = vars(args)
-    wandb.init(config=config,entity="viswa_ee", project="CS6910")
+    wandb.init(config=config,entity=args.wandb_entity, project=args.wandb_project)
 
     if args.dataset == 'fashion_mnist':
         (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
