@@ -1,0 +1,6 @@
+c:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\special\_logsumexp.py:282: RuntimeWarning: invalid value encountered in subtract
+  out = tmp - out
+C:\Users\HP\AppData\Local\Temp/ipykernel_26896/3730744090.py:129: RuntimeWarning: invalid value encountered in multiply
+  loss = -np.mean(np.multiply(pred,target),axis=1).sum()
+C:\Users\HP\AppData\Local\Temp/ipykernel_26896/3730744090.py:138: RuntimeWarning: overflow encountered in square
+  sum_w += np.square(params['weights'+str(idx)]).sum()

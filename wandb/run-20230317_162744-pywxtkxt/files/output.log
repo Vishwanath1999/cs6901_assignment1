@@ -1,0 +1,2 @@
+c:\Users\HP\AppData\Local\Programs\Python\Python39\lib\site-packages\scipy\special\_logsumexp.py:282: RuntimeWarning: invalid value encountered in subtract
+  out = tmp - out

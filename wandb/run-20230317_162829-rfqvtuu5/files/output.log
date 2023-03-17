@@ -1,0 +1,2 @@
+C:\Users\HP\AppData\Local\Temp/ipykernel_26896/3730744090.py:131: RuntimeWarning: overflow encountered in multiply
+  loss = -np.mean(np.multiply(pred-target,pred-target),axis=1).sum()

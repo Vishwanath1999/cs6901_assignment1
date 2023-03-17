@@ -1,0 +1,4 @@
+C:\Users\HP\AppData\Local\Temp/ipykernel_25808/632702344.py:139: RuntimeWarning: overflow encountered in square
+  sum_w += np.square(params['weights'+str(idx)]).sum()
+C:\Users\HP\AppData\Local\Temp/ipykernel_25808/632702344.py:140: RuntimeWarning: invalid value encountered in double_scalars
+  loss += sum_w*(lamda/(2*n_class))

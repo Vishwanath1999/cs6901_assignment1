@@ -1,0 +1,24 @@
+wandb_version: 1
+
+act_func:
+  value: tanh
+batch_size:
+  value: 16
+l2_coeff:
+  value: 0.0005
+loss_func:
+  value: mse
+lr:
+  value: 0.0001
+n_epochs:
+  value: 10
+n_hidden:
+  value: 3
+n_hidden_units:
+  value: 128
+optim_algo:
+  value: nag
+relu_param:
+  value: 0.001
+weight_init:
+  value: xavier_uniform
