@@ -78,7 +78,7 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |wandb_project|myprojectname|Project name used to track experiments in Weights & Biases dashboard|
 |wandb_entity|myname|Wandb Entity used to track experiments in the Weights & Biases dashboard|
 |dataset|fashion_mnist|choices: ["mnist", "fashion_mnist"]|
-|epochs|10|Number of epochs to train neural network|
+|n_epochs|10|Number of epochs to train neural network|
 |batch_size|32|Batch size used to train neural network|
 |loss_fn|'mse'|choices: ["mse", "cross_ent"]|
 |optim_algo|'nadam'|choices: ["sgd", "momentum", "nag", "rmsprop", "adam", "nadam"]|
@@ -88,11 +88,11 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 |beta1|0.9|Beta1 used by adam and nadam optimizers|
 |beta2|0.999|Beta2 used by adam and nadam optimizers|
 |epsilon|0.000001|Epsilon used by optimizers|
-|weight_decay|0|Weight decay used by optimizers|
-|weight_init|'xavier_uniform'|choices: ["random", "xavier_uniform"]|
+|l2_coeff|0|Weight decay used by optimizers|
+|weights_init|'xavier_uniform'|choices: ["random", "xavier_uniform"]|
 |num_layers|5|Number of hidden layers used in feedforward neural network|
-|hidden_size|128|Number of hidden neurons in a feedforward layer|
-|activation|sigmoid|choices: ["identity", "sigmoid", "tanh", "ReLU"]|
+|n_hidden_units|128|Number of hidden neurons in a feedforward layer|
+|--act_fn|sigmoid|choices: ["identity", "sigmoid", "tanh", "relu"]|
 
 ## Confusion matrix for fashion MNIST
 ![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix.png)
