@@ -100,6 +100,28 @@ python train.py --wandb_entity myname --wandb_project myprojectname
 ## Confusion matrix for fashion MNIST
 ![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/confusion_matrix.png)
 
+## Hparam Sweep for MNIST
+```
+sweep_config = {
+    'method':'bayes',
+    'metric':{
+    'name':'val_acc',
+    'goal':'maximize'
+    },
+    'parameters':{
+    'optim_algo':{
+    'values':['sgd','sgdm','rmsprop','adam','nadam','nag']
+    },
+    'weights_init':{
+    'values':['random','xavier_uniform']
+    },
+    'act_func':{
+    'values':['relu','sigmoid','tanh','identity']
+    }
+    }
+}
+```
+
 ## Confusion matrix for MNIST
 ![alt text](https://github.com/Vishwanath1999/cs6901_assignment1/blob/master/conf_mat_mnist.png)
 
