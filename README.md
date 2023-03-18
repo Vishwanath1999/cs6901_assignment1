@@ -8,6 +8,7 @@ This is an implementation of a feedforward neural network using Numpy. The netwo
 - scikit-learn
 - Seaborn
 - Keras
+- Pandas
 
 ## Wandb Report
 Report Link: https://wandb.ai/viswa_ee/CS6910/reports/CS6910-Assignment-1--VmlldzozODE3MDkz
