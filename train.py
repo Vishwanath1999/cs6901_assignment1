@@ -3,10 +3,47 @@ import wandb
 import matplotlib.pyplot as plt
 from keras.datasets import fashion_mnist,mnist
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix , accuracy_score
 from scipy.special import log_softmax,softmax
 import argparse
 import seaborn as sns
+
+
+def confusion_matrix(y_true, y_pred):
+
+    classes = np.unique(y_true)
+    n_classes = len(classes)
+    cm = np.zeros((n_classes, n_classes), dtype=int)
+
+    for i in range(n_classes):
+        for j in range(n_classes):
+            cm[i, j] = np.sum((y_true == classes[i]) & (y_pred == classes[j]))
+
+    return cm
+
+def precision_score(y_true, y_pred, average='binary'):
+
+    classes = np.unique(y_true)
+    n_classes = len(classes)
+    precision = np.zeros(n_classes)
+
+    for i in range(n_classes):
+        true_positive = np.sum((y_true == classes[i]) & (y_pred == classes[i]))
+        false_positive = np.sum((y_true != classes[i]) & (y_pred == classes[i]))
+        precision[i] = true_positive / (true_positive + false_positive)
+    if average == 'binary':
+        return precision[1]  
+    elif average == 'micro':
+        true_positive = np.sum(y_true == y_pred)
+        false_positive = np.sum(y_true != y_pred)
+        return true_positive / (true_positive + false_positive)
+    elif average == 'macro':
+        return np.mean(precision)
+    elif average == 'weighted':
+        class_count = np.bincount(y_true)
+        weights = class_count / np.sum(class_count)
+        return np.average(precision, weights=weights)
+    else:
+        raise ValueError("The 'average' parameter must be one of 'binary', 'micro', 'macro', or 'weighted'.")
 
 class FFNN:
     def __init__(self,net_size,layer_act,init_wb='random',lr=1e-3,opt='rmsprop',lamda=0,batch_size=64,\
