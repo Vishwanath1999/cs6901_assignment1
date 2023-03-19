@@ -310,16 +310,16 @@ class FFNN:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset',type=str,default='fashion_mnist',choices=['fashion_mnist','mnist'],help='Dataset choice')
-    parser.add_argument('--n_epochs', type=int, default=10, help='Number of training epochs')
-    parser.add_argument('--n_hidden', type=int, default=5, help='Number of hidden layers')
-    parser.add_argument('--n_hidden_units', type=int, default=128, help='Number of hidden units per layer')
-    parser.add_argument('--l2_coeff', type=float, default=0.0, help='L2 regularization coefficient')
-    parser.add_argument('--lr', type=float, default=0.001, help='Learning rate')
-    parser.add_argument('--optim_algo', type=str, default='nadam', choices=['adam', 'sgd','sgdm','nag','nadam'], help='Optimizer')
+    parser.add_argument('--epochs', type=int, default=10, help='Number of training epochs')
+    parser.add_argument('--num_layers', type=int, default=5, help='Number of hidden layers')
+    parser.add_argument('--hidden_size', type=int, default=128, help='Number of hidden units per layer')
+    parser.add_argument('--weight_decay', type=float, default=0.0, help='L2 regularization coefficient')
+    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate')
+    parser.add_argument('--optimizer', type=str, default='nadam', choices=['adam', 'sgd','sgdm','nag','nadam'], help='Optimizer')
     parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
-    parser.add_argument('--weights_init', type=str, default='xavier_normal', choices=['xavier', 'random'], help='Weight initialization method')
-    parser.add_argument('--act_fn', type=str, default='sigmoid', choices=['relu', 'sigmoid','tanh','identity'], help='Activation function')
-    parser.add_argument('--loss_fn', type=str, default='mse', choices=['mse', 'cross_ent'], help='Loss function')
+    parser.add_argument('--weight_init', type=str, default='xavier_normal', choices=['xavier', 'random'], help='Weight initialization method')
+    parser.add_argument('--activation', type=str, default='sigmoid', choices=['relu', 'sigmoid','tanh','identity'], help='Activation function')
+    parser.add_argument('--loss', type=str, default='mse', choices=['mse', 'cross_ent'], help='Loss function')
     parser.add_argument('--relu_param', type=float, default=0, help='ReLU parameter')
     parser.add_argument('--wandb_entity',type=str,default='name',help='Name of Wandb entity')
     parser.add_argument('--wandb_project',type=str,default='project', help='Project Name')
@@ -356,28 +356,28 @@ if __name__ == '__main__':
     n_class= 10
 
     layers = []
-    for i in range(args.n_hidden+2):
+    for i in range(args.num_layers+2):
         if i == 0:
             layers.append(X.shape[0])
         elif i == args.n_hidden+1:
             layers.append(n_class)
         else:
-            layers.append(args.n_hidden_units)
+            layers.append(args.hidden_size)
         i = i+1
     act = []
     o_act = 'softmax'
-    for i in range(args.n_hidden+1):
-        if i == args.n_hidden:
+    for i in range(args.num_layers+1):
+        if i == args.num_layers:
             act.append(o_act)
         else:
-            act.append(args.act_fn)
+            act.append(args.activation)
         i = i+1
     class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress',
                'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
     
-    model = FFNN(net_size=layers,layer_act=act,init_wb=args.weights_init,lr=args.lr,opt=args.optim_algo,\
-                 lamda=args.l2_coeff,batch_size=args.batch_size,n_epochs=args.n_epochs,loss=args.loss_func,\
-                    relu_param=args.relu_param,gamma=args.gamma,beta=args.beta,epsilon=args.epsilon)
+    model = FFNN(net_size=layers,layer_act=act,init_wb=args.weight_init,lr=args.learning_rate,opt=args.optimizer,\
+                 lamda=args.weight_decay,batch_size=args.batch_size,n_epochs=args.epochs,loss=args.loss,\
+                    relu_param=args.relu_param,gamma=args.momentum,beta=args.beta,epsilon=args.epsilon)
     model.train(X,Y,X_valid,Y_valid)
     y_test_pred,_ = model.predict(x_test.T)
 
