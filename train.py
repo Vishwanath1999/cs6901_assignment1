@@ -224,7 +224,9 @@ class FFNN:
             # elif acts[idx] == 'elu':
             #     dOut = dOut_prev*self.ELU(out,True)
             elif acts[idx] == 'identity':
-                dOut = dOut_prev*self.Linear(out,True)            
+                dOut = dOut_prev*self.Linear(out,True)
+            else:
+                raise ValueError('Enter a valid activation ..')          
             
             grad_tape['d_pred'+str(idx)] = np.dot(weight.T,dOut)
             grad_tape['d_weights'+str(idx+1)] = (np.dot(dOut,out_prev.T)+ lamda*weight)/m
@@ -346,23 +348,25 @@ class FFNN:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset',type=str,default='fashion_mnist',choices=['fashion_mnist','mnist'],help='Dataset choice')
-    parser.add_argument('--epochs', type=int, default=10, help='Number of training epochs')
-    parser.add_argument('--num_layers', type=int, default=5, help='Number of hidden layers')
-    parser.add_argument('--hidden_size', type=int, default=128, help='Number of hidden units per layer')
-    parser.add_argument('--weight_decay', type=float, default=0.0, help='L2 regularization coefficient')
-    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate')
-    parser.add_argument('--optimizer', type=str, default='nadam', choices=['adam', 'sgd','sgdm','nag','nadam'], help='Optimizer')
-    parser.add_argument('--batch_size', type=int, default=32, help='Batch size')
-    parser.add_argument('--weight_init', type=str, default='xavier_normal', choices=['xavier', 'random'], help='Weight initialization method')
-    parser.add_argument('--activation', type=str, default='sigmoid', choices=['relu', 'sigmoid','tanh','identity'], help='Activation function')
-    parser.add_argument('--loss', type=str, default='mse', choices=['mse', 'cross_ent'], help='Loss function')
-    parser.add_argument('--relu_param', type=float, default=0, help='ReLU parameter')
-    parser.add_argument('--wandb_entity',type=str,default='name',help='Name of Wandb entity')
-    parser.add_argument('--wandb_project',type=str,default='project', help='Project Name')
-    parser.add_argument('--momentum',type=float,default=0.9,help='Momentum for sgdm and nag')
-    parser.add_argument('--beta',type=float,default=0.999,help='For RMSProp')
-    parser.add_argument('--epsilon',type=float,default=1e-8,help='Epsilon for optimizers')
+    parser.add_argument('-d','--dataset',type=str,default='fashion_mnist',choices=['fashion_mnist','mnist'],help='Dataset choice')
+    parser.add_argument('-e','--epochs', type=int, default=10, help='Number of training epochs')
+    parser.add_argument('-nhl','--num_layers', type=int, default=5, help='Number of hidden layers')
+    parser.add_argument('-sz','--hidden_size', type=int, default=128, help='Number of hidden units per layer')
+    parser.add_argument('-w_d','--weight_decay', type=float, default=0.0, help='L2 regularization coefficient')
+    parser.add_argument('-lr','--learning_rate', type=float, default=0.001, help='Learning rate')
+    parser.add_argument('-o','--optimizer', type=str, default='nadam', choices=['adam', 'sgd','sgdm','nag','nadam'], help='Optimizer')
+    parser.add_argument('-b','--batch_size', type=int, default=32, help='Batch size')
+    parser.add_argument('-w_i','--weight_init', type=str, default='xavier_normal', choices=['xavier', 'random'], help='Weight initialization method')
+    parser.add_argument('-a','--activation', type=str, default='sigmoid', choices=['relu', 'sigmoid','tanh','identity'], help='Activation function')
+    parser.add_argument('-l','--loss', type=str, default='mse', choices=['mse', 'cross_ent'], help='Loss function')
+    parser.add_argument('-r_p','--relu_param', type=float, default=0, help='ReLU parameter')
+    parser.add_argument('-we','--wandb_entity',type=str,default='name',help='Name of Wandb entity')
+    parser.add_argument('-wp','--wandb_project',type=str,default='project', help='Project Name')
+    parser.add_argument('-m','--momentum',type=float,default=0.9,help='Momentum for sgdm and nag')
+    parser.add_argument('-beta','--beta',type=float,default=0.999,help='For RMSProp')
+    parser.add_argument('-eps','--epsilon',type=float,default=1e-8,help='Epsilon for optimizers')
+    parser.add_argument('-beta1','--beta1',type=float,default=0.9,help='Beta1 used by adam and nadam optimizers')
+    parser.add_argument('-beta2','--beta2',type=float,default=0.999,help='Beta2 used by adam and nadam optimizers')
     args = parser.parse_args()
     config = vars(args)
     wandb.init(config=config,entity=args.wandb_entity, project=args.wandb_project)
@@ -414,7 +418,7 @@ if __name__ == '__main__':
     
     model = FFNN(net_size=layers,layer_act=act,init_wb=args.weight_init,lr=args.learning_rate,opt=args.optimizer,\
                  lamda=args.weight_decay,batch_size=args.batch_size,n_epochs=args.epochs,loss=args.loss,\
-                    relu_param=args.relu_param,gamma=args.momentum,beta=args.beta,epsilon=args.epsilon)
+                    relu_param=args.relu_param,gamma=args.momentum,beta=args.beta,epsilon=args.epsilon,beta_1=args.beta1,beta2=args.beta2)
     model.train(X,Y,X_valid,Y_valid)
     y_test_pred,_ = model.predict(x_test.T)
 
