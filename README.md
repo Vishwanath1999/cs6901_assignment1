@@ -131,6 +131,7 @@ sweep_config = {
 
 ## References
 - https://ml-cheatsheet.readthedocs.io/en/latest/index.html
+- [micrgrad](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&ab_channel=AndrejKarpathy)
 - [Sentdex - Neural Network from scratch](https://youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3)
 - [CS7015- Deep Learning](https://youtube.com/playlist?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT)
 - https://www.deeplearningbook.org/
